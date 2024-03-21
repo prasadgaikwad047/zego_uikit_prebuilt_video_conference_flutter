@@ -102,10 +102,10 @@ class _ZegoUIKitPrebuiltVideoConferenceState
       ..add(ZegoUIKit().getErrorStream().listen(onUIKitError))
       ..add(ZegoUIKit()
           .getTurnOnYourCameraRequestStream()
-          .listen(onTurnOnYourCameraRequest))
-      ..add(ZegoUIKit()
-          .getTurnOnYourMicrophoneRequestStream()
-          .listen(onTurnOnYourMicrophoneRequest));
+          .listen(onTurnOnYourCameraRequest));
+      // ..add(ZegoUIKit()
+      //     .getTurnOnYourMicrophoneRequestStream()
+      //     .listen(onTurnOnYourMicrophoneRequest));
 
     initContext();
   }
