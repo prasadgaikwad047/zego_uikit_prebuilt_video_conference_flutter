@@ -176,9 +176,9 @@ class _ZegoUIKitPrebuiltVideoConferenceState
     if (widget.config.turnOnCameraWhenJoining) {
       await requestPermission(Permission.camera);
     }
-    if (widget.config.turnOnMicrophoneWhenJoining) {
-      await requestPermission(Permission.microphone);
-    }
+    // if (widget.config.turnOnMicrophoneWhenJoining) {
+    //   await requestPermission(Permission.microphone);
+    // }
   }
 
   void initContext() {
