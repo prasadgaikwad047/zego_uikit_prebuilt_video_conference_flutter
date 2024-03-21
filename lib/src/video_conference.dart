@@ -99,10 +99,10 @@ class _ZegoUIKitPrebuiltVideoConferenceState
     subscriptions
       ..add(
           ZegoUIKit().getMeRemovedFromRoomStream().listen(onMeRemovedFromRoom))
-      ..add(ZegoUIKit().getErrorStream().listen(onUIKitError))
-      ..add(ZegoUIKit()
-          .getTurnOnYourCameraRequestStream()
-          .listen(onTurnOnYourCameraRequest));
+      ..add(ZegoUIKit().getErrorStream().listen(onUIKitError));
+      // ..add(ZegoUIKit()
+      //     .getTurnOnYourCameraRequestStream()
+      //     .listen(onTurnOnYourCameraRequest));
       // ..add(ZegoUIKit()
       //     .getTurnOnYourMicrophoneRequestStream()
       //     .listen(onTurnOnYourMicrophoneRequest));
@@ -173,9 +173,9 @@ class _ZegoUIKitPrebuiltVideoConferenceState
   }
 
   Future<void> initPermissions() async {
-    if (widget.config.turnOnCameraWhenJoining) {
-      await requestPermission(Permission.camera);
-    }
+    // if (widget.config.turnOnCameraWhenJoining) {
+    //   await requestPermission(Permission.camera);
+    // }
     // if (widget.config.turnOnMicrophoneWhenJoining) {
     //   await requestPermission(Permission.microphone);
     // }
